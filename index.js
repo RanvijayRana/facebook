@@ -14,6 +14,33 @@ var Person = /** @class */ (function () {
         this.schoolYear = [];
         this.schoolLocation = []; //end of work and education
         this.secondaryContact = [];
+        this.address = "";
+        this.cityTown = "";
+        this.zip = 0;
+        this.neighborhood = "";
+        this.email = "";
+        this.fbEmailId = "";
+        this.socialLinkAddress = [];
+        this.socialLinkSite = [];
+        this.birthDate = 0;
+        this.birthMonth = "";
+        this.birthYear = 0;
+        this.gender = "";
+        this.interestedIn = "";
+        this.language = [];
+        this.religiousView = "";
+        this.politicalView = ""; //end of basic information    
+        //Relationship
+        this.relationshipStatus = "";
+        this.familyMember = [];
+        this.familyRelation = []; //end of relationship information
+        //About you
+        this.yourDescription = "";
+        this.nickname = [];
+        this.favoriteQuotes = ""; //end of info about you
+        //Life Event
+        this.eventYear = [];
+        this.eventName = []; //end of life event
         //methods
         //Work and Education
         this.updateCurrentDesignation = function (newDesignation, newWorkPlace) {
@@ -91,11 +118,148 @@ var Person = /** @class */ (function () {
             return _this.homeTown;
         };
         //contact information
+        this.updatePrimaryContact = function (contactDetails) {
+            _this.primaryContact = contactDetails;
+        };
+        this.getPrimaryContact = function () {
+            return _this.primaryContact;
+        };
         this.setSecondaryContact = function (contactDetails) {
             _this.secondaryContact.push(contactDetails);
         };
         this.getSecondaryContact = function () {
             return _this.secondaryContact;
+        };
+        this.updateAddress = function (address, cityTown, zip, neighborhood) {
+            _this.address = address;
+            _this.cityTown = cityTown;
+            _this.zip = zip;
+            _this.neighborhood = neighborhood;
+        };
+        this.getAddress = function () {
+            return _this.address;
+        };
+        this.getCityTown = function () {
+            return _this.cityTown;
+        };
+        this.getZip = function () {
+            return _this.zip;
+        };
+        this.getNeighborhood = function () {
+            return _this.neighborhood;
+        };
+        this.updateEmail = function (email) {
+            _this.email = email;
+        };
+        this.getEmail = function () {
+            return _this.email;
+        };
+        this.updateFbEmail = function (fbEmail) {
+            _this.fbEmailId = fbEmail;
+        };
+        this.getFbEmail = function () {
+            return _this.fbEmailId;
+        };
+        this.updateSocialLink = function (socialLinkAdd, socialLinkSite) {
+            _this.socialLinkAddress.push(socialLinkAdd);
+            _this.socialLinkSite.push(socialLinkSite);
+        };
+        this.getSocialLinkAdd = function () {
+            return _this.socialLinkAddress;
+        };
+        this.getSocialLinkSite = function () {
+            return _this.socialLinkSite;
+        };
+        this.updateBirth = function (date, month, year) {
+            _this.birthDate = date;
+            _this.birthMonth = month;
+            _this.birthYear = year;
+        };
+        this.getBirthDate = function () {
+            return _this.birthDate;
+        };
+        this.getBirthMonth = function () {
+            return _this.birthMonth;
+        };
+        this.getBirthYear = function () {
+            return _this.birthYear;
+        };
+        this.updateGender = function (gender) {
+            _this.gender = gender;
+        };
+        this.getGender = function () {
+            return _this.gender;
+        };
+        this.updateInterestedIn = function (gender) {
+            _this.interestedIn = gender;
+        };
+        this.getInterestedIn = function () {
+            return _this.interestedIn;
+        };
+        this.updateLanguage = function (language) {
+            _this.language.push(language);
+        };
+        this.getLanguage = function () {
+            return _this.language;
+        };
+        this.updateReligiousView = function (religion) {
+            _this.religiousView = religion;
+        };
+        this.getReligiousView = function () {
+            return _this.religiousView;
+        };
+        this.updatePoliticalView = function (politics) {
+            _this.politicalView = politics;
+        };
+        this.getPoliticalView = function () {
+            return _this.politicalView;
+        };
+        //Relationship
+        this.updateRelationship = function (relation) {
+            _this.relationshipStatus = relation;
+        };
+        this.getRelationshipStatus = function () {
+            return _this.relationshipStatus;
+        };
+        this.updatefamily = function (memberName, relation) {
+            _this.familyMember.push(memberName);
+            _this.familyRelation.push(relation);
+        };
+        this.getFamilyMember = function () {
+            return _this.familyMember;
+        };
+        this.getFamilyRelation = function () {
+            return _this.familyRelation;
+        };
+        //About you
+        this.updateDescription = function (description) {
+            _this.yourDescription = description;
+        };
+        this.getDescription = function () {
+            return _this.yourDescription;
+        };
+        this.updatenickname = function (nickName) {
+            _this.nickname.push(nickName);
+        };
+        this.getnickName = function () {
+            return _this.nickname;
+        };
+        this.updateFavQuotes = function (quotes) {
+            _this.favoriteQuotes = quotes;
+        };
+        this.getFavQuotes = function () {
+            return _this.favoriteQuotes;
+        };
+        //Events
+        this.updateEvent = function (eventName, eventYear) {
+            _this.eventName.push(eventName);
+            _this.eventYear.push(eventYear);
+        };
+        this.getEventName = function () {
+            return _this.eventName;
+        };
+        this.getEventYear = function () {
+            return _this.eventYear;
         };
         this.currentDesignation = currentDesignation;
         this.currentWorkPlace = currentWorkPlace;
