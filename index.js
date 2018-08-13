@@ -25,6 +25,7 @@ var Person = /** @class */ (function () {
         this.birthDate = 0;
         this.birthMonth = "";
         this.birthYear = 0;
+        this.age = 0;
         this.gender = "";
         this.interestedIn = "";
         this.language = [];
@@ -107,7 +108,7 @@ var Person = /** @class */ (function () {
         this.getCurrentCity = function () {
             return _this.currentCity;
         };
-        this.getCityLived = function () {
+        this.getPlaceLived = function () {
             return _this.placeLived;
         };
         this.updateHometown = function (newHometown) {
@@ -183,6 +184,12 @@ var Person = /** @class */ (function () {
         };
         this.getBirthYear = function () {
             return _this.birthYear;
+        };
+        this.updateAge = function (currentYear) {
+            _this.age = currentYear - _this.birthYear;
+        };
+        this.getAge = function () {
+            return _this.age;
         };
         this.updateGender = function (gender) {
             _this.gender = gender;
@@ -276,6 +283,119 @@ var designation = ["Systems Engineer Trainee", "Systems Engineer"];
 var workPlace = ["Infosys", "Infosys"];
 var placeVistited = ["Vaishali", "Muzaffarpur", "Kota", "Durgapur", "Chennai"];
 var ranvijay = new Person("Senior Systems Engineer", "Infosys", designation, workPlace, "Bangalore", "Vaishali", placeVistited, 9751862357);
+// all the information is tidious to pass through constructor so we use set/update method
+//set data for work and education section
+var skill1 = "HTML";
+var skill2 = "CSS";
+ranvijay.updateProfessionalSkill(skill1);
+ranvijay.updateProfessionalSkill(skill2);
+var college = "National Institute of Technology";
+var collegeYear = 2014;
+var degree = "B.Tech";
+var location1 = "Durgapur";
+ranvijay.updateCollege(college, collegeYear, degree, location1);
+var school = "Prestine Children High School";
+var schoolYear = 2007;
+var schoolLocation1 = "Muzaffarpur";
+ranvijay.updateSchool(school, schoolYear, schoolLocation1);
+//place lived has been update through constructor; in-time if we need to update call updateCurrentCity and hometown
+// method
+//contact information
 var contactDetails = 8778243965;
 ranvijay.setSecondaryContact(contactDetails);
-console.log(ranvijay);
+var address = "Concorde Silicon Valley";
+var cityTown = "Bangalore";
+var zip = 560100;
+var neighborhood = "Electronic City";
+ranvijay.updateAddress(address, cityTown, zip, neighborhood);
+var email = "ranvijay.144@gmail.com";
+ranvijay.updateEmail(email);
+var fbEmail = "ranvijay.rana@facebook.com";
+ranvijay.updateFbEmail(fbEmail);
+var birthDate = 20;
+var birthMonth = "Dec";
+var birthYear = 1992;
+ranvijay.updateBirth(birthDate, birthMonth, birthYear);
+var currentYear = 2018;
+ranvijay.updateAge(currentYear);
+var socialLinkAdd = "ranvijay.144@skype.com";
+var socialLinkSite = "Skype";
+ranvijay.updateSocialLink(socialLinkAdd, socialLinkSite);
+var gender = "Male";
+var interestedIn = "Female";
+var language1 = "Hindi";
+var language2 = "English";
+var religiousView = "Hinduism";
+var politicalView = "Democratic";
+ranvijay.updateGender(gender);
+ranvijay.updateInterestedIn(interestedIn);
+ranvijay.updateLanguage(language1);
+ranvijay.updateLanguage(language2);
+ranvijay.updateReligiousView(religiousView);
+ranvijay.updatePoliticalView(politicalView);
+var relationshipStatus = "Single";
+var familyMember1 = "Sonu";
+var familyMember2 = "Radha";
+var familyRelation1 = "Brother";
+var familyRelation2 = "Sister";
+ranvijay.updateRelationship(relationshipStatus);
+ranvijay.updatefamily(familyMember1, familyMember1);
+ranvijay.updatefamily(familyMember2, familyMember2);
+var eventName1 = "BirthYear";
+var eventYear1 = 1992;
+var eventName2 = "Sonu Birthday";
+var eventYear2 = 1995;
+var eventName3 = "Facebook joined";
+var eventYear3 = 2014;
+ranvijay.updateEvent(eventName1, eventYear1);
+ranvijay.updateEvent(eventName2, eventYear2);
+ranvijay.updateEvent(eventName3, eventYear3);
+var description = "helpful";
+var nickName1 = "rana";
+var nickName2 = "ranvi";
+var quotes = "Never do at expense of other!!!";
+ranvijay.updateDescription(description);
+ranvijay.updatenickname(nickName1);
+ranvijay.updatenickname(nickName2);
+ranvijay.updateFavQuotes(quotes);
+//retrieve data
+console.log(ranvijay.getCurrentDesignation);
+console.log(ranvijay.getCurrentWorkPlace);
+console.log(ranvijay.getDesignation);
+console.log(ranvijay.getWorkPlace);
+console.log(ranvijay.getProfessionalSkill);
+console.log(ranvijay.getCollege);
+console.log(ranvijay.getCollegeYear);
+console.log(ranvijay.getDegree);
+console.log(ranvijay.getCollegeLocation);
+console.log(ranvijay.getSchool);
+console.log(ranvijay.getSchoolYear);
+console.log(ranvijay.getSchoolLocation);
+console.log(ranvijay.getCurrentCity);
+console.log(ranvijay.getPlaceLived);
+console.log(ranvijay.getHomeTown);
+console.log(ranvijay.getAddress);
+console.log(ranvijay.getCityTown);
+console.log(ranvijay.getZip);
+console.log(ranvijay.getNeighborhood);
+console.log(ranvijay.getEmail);
+console.log(ranvijay.getFbEmail);
+console.log(ranvijay.getSocialLinkAdd);
+console.log(ranvijay.getSocialLinkSite);
+console.log(ranvijay.getBirthDate);
+console.log(ranvijay.getBirthMonth);
+console.log(ranvijay.getBirthYear);
+console.log(ranvijay.getAge);
+console.log(ranvijay.getGender);
+console.log(ranvijay.getInterestedIn);
+console.log(ranvijay.getLanguage);
+console.log(ranvijay.getReligiousView);
+console.log(ranvijay.getPoliticalView);
+console.log(ranvijay.getRelationshipStatus);
+console.log(ranvijay.getFamilyMember);
+console.log(ranvijay.getFamilyRelation);
+console.log(ranvijay.getDescription);
+console.log(ranvijay.getnickName);
+console.log(ranvijay.getFavQuotes);
+console.log(ranvijay.getEventName);
+console.log(ranvijay.getEventYear);
