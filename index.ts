@@ -431,10 +431,10 @@ let familyMember2: string = "Radha";
 let familyRelation1: string = "Brother";
 let familyRelation2: string = "Sister";
 ranvijay.updateRelationship(relationshipStatus);
-ranvijay.updatefamily(familyMember1, familyMember1);
-ranvijay.updatefamily(familyMember2, familyMember2);
+ranvijay.updatefamily(familyMember1, familyRelation1);
+ranvijay.updatefamily(familyMember2, familyRelation2);
 
-let eventName1: string = "BirthYear";
+let eventName1: string = "My BirthYear";
 let eventYear1: number = 1992;
 let eventName2: string = "Sonu Birthday";
 let eventYear2: number = 1995;
